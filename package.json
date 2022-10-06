@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "compile": "npx hardhat compile",
-    "test": "npx hardhat test",
-    "deploy": "npx hardhat run scripts/feeControllerDeploy.js --network bscTestnet",
+    "test": "npx hardhat test --network hardhat ./test/testliquidity.js",
+    "deploy": "npx hardhat run scripts/deployUniswap.js --network bscTestnet",
     "clean": "npx hardhat clean"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.3",
+    "config": "^3.3.8",
     "hardhat": "^2.11.2",
     "web3": "^1.8.0",
     "yarn": "^1.22.19"

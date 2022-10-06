@@ -1,11 +1,11 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-    const EToken = await ethers.getContractFactory("Etoken");
+    const BToken = await ethers.getContractFactory("Btoken");
 
-    const etoken = await EToken.deploy();
+    const btoken = await BToken.deploy();
 
-    console.log("Contract deployed at", etoken.address);
+    console.log("Contract deployed at", btoken.address);
   }
   
   // We recommend this pattern to be able to use async/await everywhere
